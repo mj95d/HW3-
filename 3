@@ -1,0 +1,211 @@
+# HW3-
+// abdulmajeed
+// 
+
+1.Write a program that prints the numbers from 1 to 100 such that: If the number is a multiple of 3, you need to print "Fizz" instead of that number. If the number is a multiple of 5, 
+you need to print "Buzz" instead of that number. If the number is a multiple of both 3 and 5, you need to print "FizzBuzz" instead of that number.
+
+public class majeed{
+
+    public static void main(String[] args) {
+     
+        for (int i = 1; i <= 100; i++) {
+         
+            String output = "";
+
+            if (i % 3 == 0) {
+                output += "Fizz";
+            }
+
+          
+            if (i % 5 == 0) {
+                output += "Buzz";
+            }
+
+          
+            if (output.isEmpty()) {
+                output = String.valueOf(i);
+            }
+
+           
+            System.out.println(output);
+        }
+    }
+}
+
+
+2.Write a Java program to reverse a string. Test Data: Input a string: The quick brown fox Expected Output: Reverse string: xof nworb kciuq ehT
+
+
+import java.util.Scanner;
+
+public class majeed {
+
+    public static void main(String[] args) {
+       
+        Scanner input = new Scanner(System.in);
+
+       
+        System.out.print("Input a string: ");
+        String str = input.nextLine();
+
+     
+        String reverse = "";
+
+       
+        for (int i = str.length() - 1; i >= 0; i--) {
+           
+            char ch = str.charAt(i);
+            reverse += ch;
+        }
+
+    
+        System.out.println("Reverse string: " + reverse);
+
+    
+        input.close();
+    }
+}
+
+Write a program that prompts the user to input a positive integer. It should then print the multiplication table of that number.
+
+
+
+import java.util.Scanner;
+
+public class Majeed {
+
+    public static void main(String[] args) {
+   
+        Scanner input = new Scanner(System.in);
+
+      
+        System.out.print("Enter a positive integer: ");
+        int num = input.nextInt();
+
+       
+        if (num <= 0) {
+            System.out.println("Invalid number. Please enter a positive integer.");
+        } else {
+          
+            for (int i = 1; i <= 10; i++) {
+              
+                int product = num * i;
+                System.out.println(num + " x " + i + " = " + product);
+            }
+        }
+
+        // Close the scanner
+        input.close();
+    }
+}
+
+
+.Write a program to find the factorial value of any number entered through the keyboard.
+
+
+import java.util.Scanner;
+
+public class majeed {
+
+    public static void main(String[] args) {
+       
+        Scanner input = new Scanner(System.in);
+
+       
+        System.out.print("Enter a number: ");
+        int num = input.nextInt();
+
+      
+        if (num < 0) {
+            System.out.println("Invalid number. Please enter a non-negative integer.");
+        } else {
+           
+            int factorial = 1;
+
+           
+            for (int i = 1; i <= num; i++) {
+               
+                factorial *= i;
+            }
+
+          
+            System.out.println("The factorial of " + num + " is " + factorial);
+        }
+
+      
+        input.close();
+    }
+}
+
+ 
+ 
+Use a for loop to print headings for four weeks (Weeks 1 - 4).
+
+
+public class WeeksDays {
+
+    public static void main(String[] args) {
+        
+        for (int i = 1; i <= 4; i++) {
+         
+            System.out.println("Week " + i);
+
+        
+            for (int j = 1; j <= 7; j++) {
+            
+                System.out.println("Day" + j);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+10.Write a program thats check if the word is a palindrome or not. hint: A string is said to be a palindrome if it is the same if we start reading it from left to right or right to left.
+import java.util.Scanner;
+
+public class majeed {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+
+        System.out.print("Enter a word: ");
+        String word = input.nextLine();
+
+
+        String reverse = "";
+
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+
+            char ch = word.charAt(i);
+            reverse += ch;
+        }
+
+
+        boolean isPalindrome = word.equalsIgnoreCase(reverse);
+
+
+        if (isPalindrome) {
+            System.out.println(word + " is a palindrome");
+        } else {
+            System.out.println(word + " is not a palindrome");
+        }
+
+
+        input.close();
+    }
+}
